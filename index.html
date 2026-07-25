@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jyotsna Gupta — VP & Chief Information Officer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #16140F;
+    --ink-soft: #1D1B15;
+    --paper: #F1ECE2;
+    --sage: #4A5A4E;
+    --gold: #A9895C;
+    --slate: #948C7C;
+    --line: rgba(241,236,226,0.12);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: inherit; }
+
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 32px; }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 36px 0;
+  }
+  nav .mark { font-family: 'Fraunces', serif; font-size: 18px; letter-spacing: 0.02em; }
+  nav .links { display: flex; gap: 36px; font-size: 14px; }
+  nav .links a { text-decoration: none; color: var(--slate); transition: color 0.2s ease; }
+  nav .links a:hover { color: var(--paper); }
+
+  .hero { padding: 100px 0 120px; }
+  .eyebrow {
+    font-size: 13px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 28px;
+  }
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: clamp(40px, 5.6vw, 70px);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    max-width: 800px;
+  }
+  h1 em { font-style: italic; color: var(--gold); font-weight: 400; }
+  .hero-sub { font-size: 18px; color: var(--slate); max-width: 540px; margin-top: 26px; }
+
+  .section { padding: 100px 0; border-top: 1px solid var(--line); }
+  .section-head { margin-bottom: 56px; }
+  .section-head .num { font-size: 13px; color: var(--gold); letter-spacing: 0.1em; display: block; margin-bottom: 10px; }
+  .section-head h2 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 34px; }
+  .section-head p { color: var(--slate); max-width: 500px; margin-top: 14px; font-size: 16px; }
+
+  .work-item {
+    padding: 44px 0;
+    border-top: 1px solid var(--line);
+    display: grid;
+    grid-template-columns: 90px 1fr 220px;
+    gap: 32px;
+    align-items: start;
+    transition: opacity 0.2s ease;
+  }
+  .work-item:last-child { border-bottom: 1px solid var(--line); }
+  .work-item:hover { opacity: 0.85; }
+
+  .work-num { font-family: 'Fraunces', serif; font-style: italic; color: var(--slate); font-size: 20px; padding-top: 4px; }
+  .work-title { font-family: 'Fraunces', serif; font-size: 25px; font-weight: 500; }
+  .work-org { color: var(--gold); font-size: 14px; margin-top: 6px; }
+  .work-desc { color: var(--slate); font-size: 15px; margin-top: 14px; max-width: 540px; }
+
+  .work-result { text-align: right; font-size: 14px; color: var(--slate); padding-top: 6px; }
+  .work-result strong { display: block; color: var(--paper); font-size: 22px; font-weight: 400; font-family: 'Fraunces', serif; }
+
+  .post-item {
+    padding: 30px 0;
+    border-top: 1px solid var(--line);
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 32px;
+  }
+  .post-item:last-child { border-bottom: 1px solid var(--line); }
+  .post-date { color: var(--slate); font-size: 13px; padding-top: 4px; letter-spacing: 0.05em; text-transform: uppercase; }
+  .post-title { font-size: 18px; font-weight: 500; }
+  .post-title a { text-decoration: none; }
+  .post-title a:hover { color: var(--gold); }
+  .post-excerpt { color: var(--slate); font-size: 15px; margin-top: 8px; max-width: 560px; }
+
+  .about-body { display: grid; grid-template-columns: 2fr 1fr; gap: 60px; }
+  .about-body p { font-size: 17px; color: #D9D4C8; max-width: 620px; }
+  .about-body p + p { margin-top: 16px; }
+  .philosophy {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    color: var(--gold);
+    font-size: 19px;
+    margin-top: 26px !important;
+    max-width: 560px;
+    border-left: 2px solid var(--gold);
+    padding-left: 20px;
+  }
+
+  .about-facts { font-size: 14px; color: var(--slate); }
+  .about-facts div { padding: 12px 0; border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 16px; }
+  .about-facts div:last-child { border-bottom: 1px solid var(--line); }
+  .about-facts span:last-child { color: var(--paper); text-align: right; }
+
+  .resume-link { display: inline-block; margin-top: 24px; font-size: 13px; color: var(--slate); text-decoration: underline; text-underline-offset: 3px; }
+  .resume-link:hover { color: var(--paper); }
+
+  .contact { padding: 110px 0 70px; }
+  .contact h2 { font-family: 'Fraunces', serif; font-weight: 500; font-size: clamp(32px, 4.2vw, 50px); max-width: 660px; }
+  .contact-links { display: flex; gap: 30px; margin-top: 36px; flex-wrap: wrap; }
+  .contact-links a { font-size: 14px; text-decoration: none; border-bottom: 1px solid var(--slate); padding-bottom: 4px; transition: border-color 0.2s ease, color 0.2s ease; }
+  .contact-links a:hover { color: var(--gold); border-color: var(--gold); }
+
+  footer { padding: 32px 0 48px; font-size: 12px; color: var(--slate); display: flex; justify-content: space-between; border-top: 1px solid var(--line); }
+
+  .reveal { opacity: 0; transform: translateY(14px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+
+  @media (max-width: 760px) {
+    nav .links { gap: 20px; font-size: 13px; }
+    .work-item { grid-template-columns: 1fr; gap: 10px; }
+    .work-result { text-align: left; }
+    .about-body { grid-template-columns: 1fr; gap: 30px; }
+    .post-item { grid-template-columns: 1fr; gap: 6px; }
+  }
+
+  ::selection { background: var(--gold); color: var(--ink); }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <nav>
+    <div class="mark">Jyotsna Gupta</div>
+    <div class="links">
+      <a href="#work">Work</a>
+      <a href="#writing">Writing</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="eyebrow">VP & Chief Information Officer</div>
+    <h1>Twenty years turning technology into something an <em>enterprise can run on</em>, not just budget for.</h1>
+    <p class="hero-sub">I lead enterprise technology, AI governance, and modernization for a 2,500-person transit agency in St. Louis. Selected work below.</p>
+  </section>
+
+  <section class="section reveal" id="work">
+    <div class="section-head">
+      <span class="num">Selected work</span>
+      <h2>Work</h2>
+      <p>Four projects that mattered, chosen for what changed, not just what shipped.</p>
+    </div>
+
+    <div class="work-item">
+      <div class="work-num">I.</div>
+      <div>
+        <div class="work-title">Enterprise AI governance, from zero</div>
+        <div class="work-org">Bi-State Development Agency, 2024–present</div>
+        <div class="work-desc">Wrote the policy, stood up the AI Council, and built the adoption roadmap before a single team started using it. Governance came first, not as an afterthought once something went wrong.</div>
+      </div>
+      <div class="work-result"><strong>Zero to enterprise</strong>AI adoption</div>
+    </div>
+
+    <div class="work-item">
+      <div class="work-num">II.</div>
+      <div>
+        <div class="work-title">Closing a $43M licensing exposure</div>
+        <div class="work-org">Bi-State Development Agency</div>
+        <div class="work-desc">An audit surfaced a software licensing gap that size. Resolved it and rebuilt the governance controls so the next audit wouldn't find the same thing.</div>
+      </div>
+      <div class="work-result"><strong>$43M</strong>exposure resolved</div>
+    </div>
+
+    <div class="work-item">
+      <div class="work-num">III.</div>
+      <div>
+        <div class="work-title">Rebuilding IT from the inside out</div>
+        <div class="work-org">Bi-State Development Agency, 2024</div>
+        <div class="work-desc">Converted outsourced IT support into an internal team. Kept the institutional knowledge that a vendor contract would've walked out the door with.</div>
+      </div>
+      <div class="work-result"><strong>$2M</strong>annual savings</div>
+    </div>
+
+    <div class="work-item">
+      <div class="work-num">IV.</div>
+      <div>
+        <div class="work-title">The first disaster recovery site in 30 years</div>
+        <div class="work-org">Bi-State Development Agency</div>
+        <div class="work-desc">The agency had gone three decades without failover capability. Built the alternate recovery site, then made testing routine instead of theoretical.</div>
+      </div>
+      <div class="work-result"><strong>30+ yrs</strong>without one, until now</div>
+    </div>
+  </section>
+
+  <section class="section reveal" id="writing">
+    <div class="section-head">
+      <span class="num">Notes</span>
+      <h2>Writing</h2>
+      <p>First posts are still in draft. Here's what's coming.</p>
+    </div>
+
+    <div class="post-item">
+      <div class="post-date">Draft</div>
+      <div>
+        <div class="post-title"><a href="#">What a $43M audit exposure actually teaches you about governance</a></div>
+        <div class="post-excerpt">Not the fix. The controls that should've caught it years earlier.</div>
+      </div>
+    </div>
+    <div class="post-item">
+      <div class="post-date">Draft</div>
+      <div>
+        <div class="post-title"><a href="#">Building AI governance before anyone asks for it</a></div>
+        <div class="post-excerpt">Why the policy came before the tools, not after.</div>
+      </div>
+    </div>
+    <div class="post-item">
+      <div class="post-date">Draft</div>
+      <div>
+        <div class="post-title"><a href="#">Thirty years without a disaster recovery site</a></div>
+        <div class="post-excerpt">What it actually takes to build one from nothing, and get people to trust it.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section reveal" id="about">
+    <div class="section-head">
+      <span class="num">Background</span>
+      <h2>About</h2>
+    </div>
+    <div class="about-body">
+      <div>
+        <p>Twenty years ago I was an Oracle applications developer, writing code for manufacturing systems. Today I sit in the room where a transit agency's technology strategy gets decided, and I still think in the same terms: does this actually work, and can the person after me maintain it.</p>
+        <p>I've rebuilt IT operating models, closed audit exposures most people would rather not find, and stood up governance for AI before it became a mandate instead of a choice. The thread through all of it: build the thing right the first time, so nobody has to rebuild it in a crisis.</p>
+        <p class="philosophy">"Build strong relationships, steward resources responsibly, and deliver measurable business results."</p>
+        <a href="#" class="resume-link">Full resume (PDF) ↓</a>
+      </div>
+      <div class="about-facts">
+        <div><span>Based in</span><span>St. Louis, MO</span></div>
+        <div><span>Industry</span><span>Public transit &amp; infrastructure</span></div>
+        <div><span>Portfolio managed</span><span>$30M+</span></div>
+        <div><span>Users supported</span><span>2,500+</span></div>
+        <div><span>Certifications</span><span>PMP</span></div>
+        <div><span>Status</span><span>Open to conversations</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact reveal" id="contact">
+    <h2>If you need someone who's rebuilt this before, let's talk.</h2>
+    <div class="contact-links">
+      <a href="mailto:jyotsnagupta@gmail.com">jyotsnagupta@gmail.com</a>
+      <a href="tel:+13144843267">(314) 484-3267</a>
+      <a href="https://www.linkedin.com/in/jgupta12000" target="_blank" rel="noopener">linkedin.com/in/jgupta12000</a>
+    </div>
+  </section>
+
+  <footer>
+    <span>Jyotsna Gupta — VP & Chief Information Officer</span>
+    <span>St. Louis, Missouri</span>
+  </footer>
+
+</div>
+
+<script>
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
